@@ -21,9 +21,15 @@ let students = [
 
 let body = document.body;
 
-let h2 = document.createElement("h2");
-h2.innerText = students.map((e) => {
+students.map((e) => {
+  let fullname = document.createElement("h1");
+  fullname.innerText = `The Name is : ${e.fullName}`;
+  body.appendChild(fullname);
+  let gender = document.createElement("h4");
+  gender.innerText = `The gender is : ${e.gender}`;
+  body.appendChild(gender);
   let h2 = document.createElement("h2");
   h2.innerText = e.imgUrl;
+  h2.innerText = `The Image Url is : ${e.imgUrl}`;
   body.appendChild(h2);
 });
