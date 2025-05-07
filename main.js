@@ -18,7 +18,7 @@ let students = [
     age: 26,
     gender: "female",
     imgUrl:
-      "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      "https://images.pexels.com/photos/1800456/pexels-photo-1800456.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
 ];
 
@@ -37,8 +37,8 @@ students.map((e) => {
     : (gender.style.color = "pink");
   gender.innerText = `The gender is : ${e.gender}`;
   body.appendChild(gender);
-  let h2 = document.createElement("h2");
-  h2.innerText = e.imgUrl;
-  h2.innerText = `The Image Url is : ${e.imgUrl}`;
-  body.appendChild(h2);
+  let img = document.createElement("img");
+  img.src = e.imgUrl;
+  img.width = "400";
+  body.appendChild(img);
 });
